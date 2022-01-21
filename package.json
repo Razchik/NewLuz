@@ -1,0 +1,22 @@
+{
+  "name": "newluz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Razchik/NewLuz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Razchik/NewLuz/issues"
+  },
+  "homepage": "https://github.com/Razchik/NewLuz#readme",
+  "dependencies": {
+    "yarn": "^1.22.17"
+  }
+}
