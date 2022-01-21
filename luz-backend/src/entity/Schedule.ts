@@ -1,12 +1,15 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
+import { Week } from "./Week";
 
-@Entity()
+@Entity("schedule", {"schema": "luz"})
 export class Schedule {
 
     @PrimaryGeneratedColumn()
-    id: number;
+    schedule_id: number;
 
-    @Column()
-    courseId: string;
+    @Column('text')
+    course_id: string;
 
+    @OneToMany(() => Week, week => week.schedule)
+    weeks: Week[];
 }
