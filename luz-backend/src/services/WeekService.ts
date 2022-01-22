@@ -1,12 +1,12 @@
 import { WeekRepository } from "../repositories/WeekRepository";
 
 
-export const ScheduleService = {
+export const WeekService = {
   getAllWeeks: async () => {
-    await WeekRepository.findAllWeeks();
+    return await WeekRepository.findAllWeeks();
   },
 
   addWeek: async (isVisible: boolean, scheduleId: number) => {
-    await WeekRepository.addWeek(isVisible, scheduleId);
+    return await WeekRepository.addWeek(isVisible, scheduleId);
   },
 };
