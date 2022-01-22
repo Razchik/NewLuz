@@ -3,7 +3,7 @@ import { Schedule } from "../entity/Schedule";
 
 export const ScheduleRepository = {
   findAllSchedules: async () => {
-    return await getRepository(Schedule).find();
+    await getRepository(Schedule).find();
   },
 
   addSchedule: async (courseId: string) => {
