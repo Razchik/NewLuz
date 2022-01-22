@@ -11,7 +11,7 @@ import { Schedule } from "./Schedule";
 @Entity("week", { schema: "luz" })
 export class Week {
   @PrimaryGeneratedColumn()
-  week_id: number;
+  id: number;
 
   @Column("bool")
   is_visible: boolean;

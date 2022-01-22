@@ -11,7 +11,7 @@ import { Week } from "./Week";
 @Entity("day", { schema: "luz" })
 export class Day {
   @PrimaryGeneratedColumn()
-  day_id: number;
+  id: number;
 
   @Column("date")
   date: string;

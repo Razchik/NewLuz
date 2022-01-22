@@ -4,7 +4,7 @@ import { Week } from "./Week";
 @Entity("schedule", { schema: "luz" })
 export class Schedule {
   @PrimaryGeneratedColumn()
-  schedule_id: number;
+  id: number;
 
   @Column("text")
   course_id: string;

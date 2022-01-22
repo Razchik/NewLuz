@@ -4,7 +4,7 @@ import { Day } from "./Day";
 @Entity("time_slot", { schema: "luz" })
 export class Timeslot {
   @PrimaryGeneratedColumn()
-  slot_id: number;
+  id: number;
 
   @Column("time without time zone")
   start_time: string;
