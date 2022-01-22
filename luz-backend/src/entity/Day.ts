@@ -1,19 +1,24 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany} from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  OneToMany,
+} from "typeorm";
 import { Timeslot } from "./Timeslot";
 import { Week } from "./Week";
 
-@Entity("day", {"schema": "luz"})
+@Entity("day", { schema: "luz" })
 export class Day {
+  @PrimaryGeneratedColumn()
+  day_id: number;
 
-    @PrimaryGeneratedColumn()
-    day_id: number;
+  @Column("date")
+  date: string;
 
-    @Column('date')
-    date: string;
+  @ManyToOne(() => Week, (week) => week.days)
+  week: Week;
 
-    @ManyToOne(() => Week, week => week.days)
-    week: Week;
-
-    @OneToMany(() => Timeslot, timeslot => timeslot.day)
-    timeslots: Timeslot[];
+  @OneToMany(() => Timeslot, (timeslot) => timeslot.day)
+  timeslots: Timeslot[];
 }
